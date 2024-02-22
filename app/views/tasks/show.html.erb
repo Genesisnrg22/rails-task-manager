@@ -1,0 +1,13 @@
+<div class="d-flex align-items-center card p-3">
+  <div class="card-body">
+    <div class="card-title">
+      <h2><%= @task.id %>-<%= @task.title %></h2>
+    </div>
+    <div class="card-text">
+      <%= @task.details %>
+    </div>
+    <div class="card-link">
+      <%= link_to "Back to the Tasks", tasks_path %>
+    </div>
+  </div>
+</div>
