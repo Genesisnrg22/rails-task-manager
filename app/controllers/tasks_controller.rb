@@ -8,6 +8,10 @@ class TasksController < ApplicationController
     @task = Task.find(params[:id])
   end
 
+  def new
+    @task = Task.new
+  end
+
   def create
     @task = Task.new(task_params)
     if @task.save
@@ -15,6 +19,7 @@ class TasksController < ApplicationController
     else
       render :new, status: :unprocessable_entity
     end
+    # No need for app/views/restaurants/create.html.erb
   end
 
   def update
